@@ -3,14 +3,15 @@
  * @return {boolean}
  */
 var containsDuplicate = function(nums) {
-    var numCount = {}
+    let numCount = {};
     
-    for (var i = 0; i < nums.length; i++) {
-        var num = nums[i];
-        if (numCount[num]) {
-            return true;
+    for (let i = 0; i < nums.length; i++) {
+        let num = nums[i];
+        
+        if (!numCount[num]) {
+            numCount[num] = 1;
         } else {
-            numCount[num] = true;
+            return true;
         }
     }
     
