@@ -3,11 +3,16 @@
  * @return {number[]}
  */
 var findDisappearedNumbers = function(nums) {
-    var missing = [];
-    for (var i = 1; i <= nums.length; i++) {
+    let sorted = nums.sort();
+    let i = 1;
+    let n = nums.length;
+    let missing = [];
+    
+    while (i <= n) {
         if (nums.indexOf(i) === -1) {
-            missing.push(i);
+            missing.push(i)
         }
+        i++;
     }
     
     return missing;
