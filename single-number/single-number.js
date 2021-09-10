@@ -3,16 +3,18 @@
  * @return {number}
  */
 var singleNumber = function(nums) {
-    var count = {};
     
-    for (var i = 0; i < nums.length; i++) {
-        var num = nums[i];
-        if (count[num]) {
-            delete count[num];
+    let numCount = {};
+    
+    for (let i = 0; i < nums.length; i++) {
+       let num = nums[i];
+        if (!numCount[num]) {
+            numCount[num] = 1;
         } else {
-            count[num] = 1;
+            delete numCount[num];
         }
     }
+    console.log(numCount)
+    return Object.keys(numCount);
     
-    return Object.keys(count)[0];
 };
