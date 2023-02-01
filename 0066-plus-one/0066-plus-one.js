@@ -12,12 +12,6 @@ var plusOne = function(digits) {
             }
             i--;
         }
-        // console.log(i)
-        // if (Math.abs(i - 1) === digits.length || Math.abs(i) === digits.length) {
-        //     digits.unshift(1);
-        // } else {
-        //     digits[i - 1]++;
-        // }
         digits[i]++;
         return digits;
     } else {
