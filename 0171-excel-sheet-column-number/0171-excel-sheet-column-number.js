@@ -9,7 +9,7 @@ var titleToNumber = function(columnTitle) {
     
    for (let i = columnTitle.length - 1; i >= 0; i--) {
        let char = columnTitle[i];
-       if (i === columnTitle.length - 1 || columnTitle.length === 1) {
+       if (i === columnTitle.length - 1) {
            index += (indices.indexOf(char) + 1)
        } else {
            index += ((indices.indexOf(char) + 1) * outOf);
