@@ -11,11 +11,9 @@ var titleToNumber = function(columnTitle) {
        let char = columnTitle[i];
        if (i === columnTitle.length - 1 || columnTitle.length === 1) {
            index += (indices.indexOf(char) + 1)
-           console.log('here', index)
        } else {
            index += ((indices.indexOf(char) + 1) * outOf);
            outOf *= 26;
-           console.log('now here', outOf)
        }
        
    }
