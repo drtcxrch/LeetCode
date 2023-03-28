@@ -10,7 +10,6 @@ class Solution(object):
             if num not in dupes:
                 dupes[num] = 1
             else:
-                print(dupes)
                 return True
             
         return False
