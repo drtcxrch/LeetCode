@@ -16,5 +16,5 @@ class Solution:
             node.next = previous
             previous = node
             node = save
-            
+        
         return previous
