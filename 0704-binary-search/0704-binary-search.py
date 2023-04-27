@@ -5,7 +5,7 @@ class Solution:
         
         
         while left <= right:
-            mid = math.ceil(left + (right - left ) / 2)
+            mid = math.ceil((right + left) / 2)
 
             if nums[mid] == target:
                 return mid 
