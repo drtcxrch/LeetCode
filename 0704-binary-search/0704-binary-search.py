@@ -6,8 +6,7 @@ class Solution:
         
         while left <= right:
             mid = math.ceil(left + (right - left ) / 2)
-            print(mid)
-            
+
             if nums[mid] == target:
                 return mid 
             elif target < nums[mid]:
