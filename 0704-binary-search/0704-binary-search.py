@@ -1,13 +1,20 @@
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        i = 0
-        length = len(nums)
+        left = 0
+        right = len(nums) - 1
         
-        while i < length:
-            num = nums[i]
-            if num == target:
-                return i
-            i+=1
         
+        while left <= right:
+            mid = math.ceil(left + (right - left ) / 2)
+            print(mid)
+            
+            if nums[mid] == target:
+                return mid 
+            elif target < nums[mid]:
+                right = mid - 1
+            else:
+                left = mid  + 1
+                
+            
         return -1
             
