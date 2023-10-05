@@ -3,15 +3,15 @@
  * @return {boolean}
  */
 var containsDuplicate = function(nums) {
-    let dupes = {};
-    
-    for (num of nums) {
-        if (dupes[num]) {
+    let seen = {};
+
+    for (let num of nums) {
+        if (seen[num]) {
             return true;
-        } else {
-            dupes[num] = true;
         }
+
+        seen[num] = true;
     }
-    
+
     return false;
 };
