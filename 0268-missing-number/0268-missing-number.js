@@ -3,11 +3,11 @@
  * @return {number}
  */
 var missingNumber = function(nums) {
-    let n = nums.length;
+    let sorted = nums.sort((a, b) => a - b);
     
-    for (let i = 0; i <= n; i++) {
-        if (nums.indexOf(i) === -1) {
-            return i
+    for (let i = 0; i <= sorted.length; i++) {
+        if (i !== sorted[i]) {
+            return i;
         }
     }
 };
