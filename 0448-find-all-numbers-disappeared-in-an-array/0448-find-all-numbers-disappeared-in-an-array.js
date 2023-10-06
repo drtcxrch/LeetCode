@@ -3,15 +3,14 @@
  * @return {number[]}
  */
 var findDisappearedNumbers = function(nums) {
-    let missing = [];
-    let n = nums.length; 
+    let n = nums.length;
+    let disappeared = [];
     
     for (let i = 1; i <= n; i++) {
         if (nums.indexOf(i) === -1) {
-            missing.push(i);
+            disappeared.push(i);
         }
     }
     
-    return missing;
-    
+    return disappeared;
 };
