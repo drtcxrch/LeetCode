@@ -3,14 +3,28 @@
  * @return {number[]}
  */
 var findDisappearedNumbers = function(nums) {
-    let n = nums.length;
-    let disappeared = [];
+   let uniq = {};
     
-    for (let i = 1; i <= n; i++) {
-        if (nums.indexOf(i) === -1) {
-            disappeared.push(i);
+    for (let num of nums) {
+        if (!uniq[num]) {
+            uniq[num] = true;
         }
     }
     
-    return disappeared;
-};
+    let sorted = Object.keys(uniq).sort((a, b) => a - b);
+    let n = nums.length;
+    let missing = [];
+    let i = 1;
+    let j = i - 1;
+  
+    while (i <= n) {
+        if (Number(sorted[j]) !== i) {
+            missing.push(i);
+        } else {
+            j++;
+        }
+        i++;
+    }
+        
+    return missing;
+}
