@@ -8,7 +8,6 @@ var maxProfit = function(prices) {
  
  for (let price of prices) {
      let difference = price - buy;
-     console.log(price, buy, profit)
      if (price < buy) {
          buy = price;
      } else if (difference > profit) {
