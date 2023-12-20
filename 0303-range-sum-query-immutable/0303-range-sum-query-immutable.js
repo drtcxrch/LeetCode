@@ -12,8 +12,17 @@ var NumArray = function(nums) {
  */
 NumArray.prototype.sumRange = function(left, right) {
     let sum = 0;
-    for (let i = left; i <= right; i++) {
-        sum += this.nums[i];
+   
+    while (left <= right) {
+      if (left === right) {
+         sum += this.nums[left];
+      } else {
+         sum += this.nums[left];
+         sum += this.nums[right];
+      }
+       
+       left++;
+       right--;
     }
     
     return sum;
