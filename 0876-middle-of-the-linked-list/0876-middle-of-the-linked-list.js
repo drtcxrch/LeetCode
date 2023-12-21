@@ -21,13 +21,12 @@ var middleNode = function(head) {
     node = head;
     
     let mid = Math.floor(count / 2);
-    console.log(mid)
     while (node) {
         
         if (mid === 0) {
             return node;
         }
-       mid--;
+        mid--;
         node = node.next;
     }
 };
