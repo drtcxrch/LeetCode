@@ -18,7 +18,7 @@ var minDepth = function(root) {
     }
     
     var traverseTree = function(node, level) {
-        if (!node) {
+        if (!node || (min !== undefined && level > min)) {
             return;
         }
         
