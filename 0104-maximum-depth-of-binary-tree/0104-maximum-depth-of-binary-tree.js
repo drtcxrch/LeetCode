@@ -12,7 +12,7 @@
  */
 var maxDepth = function(root, depth = 0, max = 0) {
     if (!root) {
-        return depth + 0;
+        return depth;
     }
     
     depth++;
